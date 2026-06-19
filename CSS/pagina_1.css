@@ -1,0 +1,312 @@
+/* RESET CSS */
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+/* VARIÁVEIS */
+:root {
+    --font-body: "Lora", serif;
+    --color-body: hsl(0, 0%, 33%);
+    --color-title: hsl(127, 100%, 10%);
+    --color-subtitle: hsl(0, 0%, 10%);
+    --color-light: hsla(0, 0%, 100%, 0.852);
+    --weight-400: 400;
+    --weight-100: 100;
+    --font-h1: 3rem;
+    --font-h2: 2rem;
+    --font-h3: 1.5rem;
+    --font-h4: 1.2rem;
+    --font-p: 1rem;
+    --radius: 4px;
+}
+
+/* ------------------------------------------- */
+body {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: row;
+    font-family: var(--font-body);
+    color: var(--color-body);
+    text-wrap: balance;
+}
+
+/* ------------------------------------------- */
+header {
+    padding: 1rem;
+    background-color: #0b91147d;
+    border: 1px solid var(--color-subtitle);
+    width: 18dvw;
+    min-height: 100dvh;
+    flex-shrink: 0;
+    /* impede que o header encolha */
+}
+
+main {
+    background-color: #dfdfdfb2;
+    padding: 0.5rem 3rem;
+    border: 1px solid black;
+    /*main ocupa o espaco restante */
+    flex: 1;
+}
+
+article {
+    padding-top: 2rem;
+    padding-right: 1rem;
+    padding-left: 1rem;
+}
+
+section {
+    margin: 1rem auto;
+    padding: 1rem;
+    padding-left: 4rem;
+}
+
+/* ------------------------------------------- */
+fieldset {
+    position: relative;
+    left: 1rem;
+    padding: 0.1rem;
+    border-radius: 0.3rem;
+}
+
+/* ------------------------------------------- */
+form {
+    display: flex;
+    font-family: "Garamond", serif;
+    width: 100%;
+    text-align: left;
+    font-size: var(--font-p);
+}
+
+input {
+    font-family: "Garamond", serif;
+    width: 200px;
+    text-align: left;
+    font-size: var(--font-p);
+    border-radius: var(--radius);
+}
+
+/* ------------------------------------------- */
+.header_pg1 {
+    h1 {
+        padding-bottom: 1rem;
+        font-size: var(--font-h1);
+        color: var(--color-title);
+    }
+
+    ul {
+        list-style: none;
+        line-height: 3rem;
+        /* CORREÇÃO: linha fixa em vez de 100px */
+    }
+
+    li {
+        text-wrap: balance;
+        font-size: var(--font-h4);
+        font-weight: var(--weight-400);
+    }
+
+    a {
+        text-decoration: none;
+        color: var(--color-body);
+    }
+
+    a:hover {
+        color: var(--color-title);
+    }
+}
+
+/* ------------------------------------------- */
+.main_pg1 {
+    h2 {
+        padding-top: 1rem;
+        font-size: var(--font-h2);
+        color: var(--color-title);
+    }
+
+    p {
+        font-size: var(--font-p);
+    }
+}
+
+/* ------------------------------------------- */
+.article_sessao1 {
+    h3 {
+        font-size: var(--font-h3);
+        color: var(--color-title);
+    }
+
+    h4 {
+        font-size: var(--font-h4);
+        color: var(--color-subtitle);
+    }
+
+    ul {
+        list-style-type: circle;
+    }
+
+    p {
+        font-size: var(--font-p);
+        font-weight: var(--weight-400);
+        color: var(--color-body);
+    }
+}
+
+/* ------------------------------------------- */
+.article_sessao2 {
+    padding-top: 0.5rem;
+
+    h3 {
+        font-size: var(--font-h3);
+        color: var(--color-title);
+    }
+
+    ul {
+        list-style-type: circle;
+    }
+
+    h4 {
+        font-size: var(--font-h4);
+        color: var(--color-subtitle);
+    }
+
+    p {
+        font-size: var(--font-p);
+        font-weight: var(--weight-400);
+        color: var(--color-body);
+    }
+}
+
+/* ------------------------------------------- */
+/* BOTÕES E INPUTS */
+
+#botao {
+    margin-left: 10px;
+    font-family: "Garamond", serif;
+    font-size: var(--font-p);
+}
+
+#botao:hover {
+    font-weight: var(--weight-400);
+    border: 1px solid #000000;
+    background-color: #a9a9a9;
+}
+
+#sessao1_input:hover {
+    transition: 0.1s;
+    font-weight: var(--weight-100);
+    border: 2px solid #a4ffa4d3;
+    background-color: #47bb4f89;
+}
+
+#sessao2_input:hover {
+    font-weight: var(--weight-100);
+    border: 2px solid #ff8383ce;
+    background-color: #8b2e2eda;
+}
+
+
+.prosseguir {
+    font-family: "Garamond", serif;
+    font-size: var(--font-p);
+    text-align: center;
+    width: 100px;
+    letter-spacing: 1.2px;
+    transition: 0.5s;
+    margin-top: 1rem;
+    margin-left: auto;
+
+}
+
+.prosseguir {
+    a {
+        text-decoration: none;
+        color: black;
+    }
+}
+
+.prosseguir:hover {
+    transition: 0.1s;
+    font-weight: var(--weight-100);
+    border: 2px solid #000000;
+    background-color: #a9a9a9;
+}
+
+/* ============================================ */
+/* RESPONSIVIDADE — TABLETS (max 768px)         */
+/* ============================================ */
+@media (max-width: 768px) {
+
+    body {
+        flex-direction: column;
+    }
+
+    header {
+        width: 100%;
+        min-height: auto;
+    }
+
+    .header_pg1 ul {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        line-height: normal;
+    }
+
+    main {
+        padding: 0.5rem 1.5rem;
+    }
+
+    section {
+        padding-left: 1rem;
+    }
+
+    fieldset {
+        left: 0;
+    }
+
+    .prosseguir {
+        margin: 1rem auto;
+        /* centraliza no mobile */
+    }
+}
+
+/* ============================================ */
+/* RESPONSIVIDADE — CELULAR (max 480px)         */
+/* ============================================ */
+@media (max-width: 480px) {
+
+    /* :root {
+        --font-h1: 2rem;
+        --font-h2: 1.5rem;
+        --font-h3: 1.2rem;
+        --font-h4: 1rem;
+        --font-p: 0.9rem;
+    } */
+
+    main {
+        padding: 0.5rem 1rem;
+    }
+
+    input {
+        width: 100%;
+    }
+
+    form {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    #botao {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .prosseguir {
+        width: 80%;
+        margin: 1rem auto;
+    }
+}

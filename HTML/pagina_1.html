@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orbe Fintech</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../CSS/pagina_1.css">
+</head>
+
+<body>
+    <!--MENU PRINCIPAL -->
+    <header class="header_pg1">
+        <h1>Orbe</h1>
+        _________________
+            <ul>
+                <li>Cadastro Inicial</li>
+                <li><a href=""><strong>Gestão</strong></a></li>
+                <li><a href=""><strong>Integração</strong></a></li>
+                <li><a href=""><strong>Investimentos</strong></a></li>
+            </ul>
+    </header>
+
+    <main class=" main_pg1">
+        <!-- Título da página -->
+        <h2>Cadastro Inicial</h2>
+        <p>Essas informações nos permitem criar sugestões personalizadas para melhorar sua situação financeira. Seja honesto, niguém além de você terá acesso a essas informações.</p>
+
+        <article class=" article_sessao1">
+            <fieldset>
+                <legend>
+                    <h3>Renda Mensal</h3>
+                </legend>
+                <p>Renda mensal é o valor total recebido por um indivíduo em um período de 30
+                    dias, proveniente de fontes como salário, benefícios e outros rendimentos.</p>
+                <section class="sessao1">
+                    <ul>
+                        <div class="renda_fixa">
+                            <li>
+                                <h4>Renda Fixa</h4>
+                            </li>
+                            <p>(Salário, Benefícios, Aluguéis)</p>
+                            <!-- Botão para inserção do valor numérico da RENDA fixa -->
+                            <form name="dados-usuario" method="post" action="salvar informações no BD">
+                                <input id="sessao1_input" type="text" name="dados-usuario" required minlength="5" maxlength="10"
+                                    placeholder="Ex:3.500,00">
+                                    <button type="submit" id="botao">Confirmar</button>
+                                </form>
+                        </div>
+                        <div class="renda_variavel">
+                            <li>
+                                <h4>Renda Variável</h4>
+                            </li>
+                            <p>(Freelances, Comissões, Bicos)</p>
+                            <!-- Botão para inserção do valor numérico da RENDA variável -->
+                            <form name="dados" id="dados" method="post" action="salvar informações no BD">
+                                <input id="sessao1_input" type="text" name="dados-usuario" required minlength="5" maxlength="10"
+                                    placeholder="Ex:850,00">
+                                <button type="submit" id="botao">Confirmar</button>
+                            </form>
+                        </div>
+                    </ul>
+                </fieldset>
+            </section>
+        </article>
+
+        <article class="article_sessao2">
+            <fieldset>
+                <legend>
+                    <h3>Compromissos Financeiros</h3>
+                </legend>
+                <p>Compromissos financeiros são as obrigações financeiras que um indivíduo
+                    tem, como contas a pagar, dívidas e outras despesas regulares.</p>
+                <section class="sessao2">
+                    <ul>
+                        <div class="gastos_fixos">
+                            <li>
+                                <h4>Gastos Fixos Mensais</h4>
+                            </li>
+                            <p>(Aluguel, Assinaturas, Mensalidades)</p>
+                            <!-- botão para inserção do valor numérico dos gastos fixos mensais -->
+                            <form name="dados" id="dados" method="post" action="salvar informações no BD">
+                                <input id="sessao2_input" type="text" name="dados-usuario" required minlength="5" maxlength="10"
+                                    placeholder="Ex:1.850,00">
+                                <button type="submit" id="botao">Confirmar</button>
+                            </form>
+                        </div>
+
+                        <div class="dividas_ativas">
+                            <li>
+                                <h4>Dividas Ativas</h4>
+                            </li>
+                            <p>(Empréstimos, Cartão de Crédito, Financiamentos)</p>
+                            <!-- botão para inserção do valor numérico das dívidas ativas -->
+                            <form name="dados" id="dados" method="post" action="salvar informações no BD">
+                                <input id="sessao2_input"  type="text" name="dados-usuario" required minlength="5" maxlength="10"
+                                    placeholder="Ex: 2.360,00">
+                                <button type="submit" id="botao">Confirmar</button>
+                            </form>
+                        </div>
+                    </ul>
+                </section>
+            </fieldset>
+        </article>
+        <form name="proxima-pagina" id="proxima-pagina" method="get" action="Ir para página 2">
+            <button type="submit" class="prosseguir">Prosseguir</button>
+        </form>
+    </main>
+</body>
+</html>
