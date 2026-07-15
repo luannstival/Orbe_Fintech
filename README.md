@@ -101,7 +101,7 @@ orbe/
 
 1. Clone o repositório:
    ```bash
-   git clone https://github.com/seu-usuario/orbe-fintech.git
+   git clone https://github.com/luannstival/orbe-fintech.git
    ```
 2. Abra o arquivo `HTML/pagina_1.html` no seu navegador.
 
@@ -118,8 +118,8 @@ Este projeto é desenvolvido como atividade prática do curso de **ADS (Análise
 ## 👨‍💻 Autor
 
 **Luann** — estudante de ADS na FIAP  
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-blue?style=flat&logo=linkedin)](https://linkedin.com/in/seu-perfil)
-[![GitHub](https://img.shields.io/badge/GitHub-black?style=flat&logo=github)](https://github.com/seu-usuario)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-blue?style=flat&logo=linkedin)](https://linkedin.com/in/luann-stival-6573133b5)
+[![GitHub](https://img.shields.io/badge/GitHub-black?style=flat&logo=github)](https://github.com/luannstival)
 
 ---
 
