@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="../CSS/pagina_1.css">
+    <link rel="stylesheet" href="./pagina_1.css">
 </head>
 
 <body>
@@ -17,18 +17,19 @@
     <header class="header_pg1">
         <h1>Orbe</h1>
         _________________
-            <ul>
-                <li>Cadastro Inicial</li>
-                <li><a href=""><strong>Gestão</strong></a></li>
-                <li><a href=""><strong>Integração</strong></a></li>
-                <li><a href=""><strong>Investimentos</strong></a></li>
-            </ul>
+        <ul>
+            <li>Cadastro Inicial</li>
+            <li><a href=""><strong>Gestão</strong></a></li>
+            <li><a href=""><strong>Integração</strong></a></li>
+            <li><a href=""><strong>Investimentos</strong></a></li>
+        </ul>
     </header>
 
     <main class=" main_pg1">
         <!-- Título da página -->
         <h2>Cadastro Inicial</h2>
-        <p>Essas informações nos permitem criar sugestões personalizadas para melhorar sua situação financeira. Seja honesto, niguém além de você terá acesso a essas informações.</p>
+        <p>Essas informações nos permitem criar sugestões personalizadas para melhorar sua situação financeira. Seja
+            honesto, niguém além de você terá acesso a essas informações.</p>
 
         <article class=" article_sessao1">
             <fieldset>
@@ -46,10 +47,10 @@
                             <p>(Salário, Benefícios, Aluguéis)</p>
                             <!-- Botão para inserção do valor numérico da RENDA fixa -->
                             <form name="dados-usuario" method="post" action="salvar informações no BD">
-                                <input id="sessao1_input" type="text" name="dados-usuario" required minlength="5" maxlength="10"
-                                    placeholder="Ex:3.500,00">
-                                    <button type="submit" id="botao">Confirmar</button>
-                                </form>
+                                <input id="sessao1_input" type="text" name="dados-usuario" required minlength="5"
+                                    maxlength="10" placeholder="Ex:3.500,00">
+                                <button type="submit" id="botao">Confirmar</button>
+                            </form>
                         </div>
                         <div class="renda_variavel">
                             <li>
@@ -58,13 +59,13 @@
                             <p>(Freelances, Comissões, Bicos)</p>
                             <!-- Botão para inserção do valor numérico da RENDA variável -->
                             <form name="dados" id="dados" method="post" action="salvar informações no BD">
-                                <input id="sessao1_input" type="text" name="dados-usuario" required minlength="5" maxlength="10"
-                                    placeholder="Ex:850,00">
+                                <input id="sessao1_input" type="text" name="dados-usuario" required minlength="5"
+                                    maxlength="10" placeholder="Ex:850,00">
                                 <button type="submit" id="botao">Confirmar</button>
                             </form>
                         </div>
                     </ul>
-                </fieldset>
+            </fieldset>
             </section>
         </article>
 
@@ -84,8 +85,8 @@
                             <p>(Aluguel, Assinaturas, Mensalidades)</p>
                             <!-- botão para inserção do valor numérico dos gastos fixos mensais -->
                             <form name="dados" id="dados" method="post" action="salvar informações no BD">
-                                <input id="sessao2_input" type="text" name="dados-usuario" required minlength="5" maxlength="10"
-                                    placeholder="Ex:1.850,00">
+                                <input id="sessao2_input" type="text" name="dados-usuario" required minlength="5"
+                                    maxlength="10" placeholder="Ex:1.850,00">
                                 <button type="submit" id="botao">Confirmar</button>
                             </form>
                         </div>
@@ -97,8 +98,8 @@
                             <p>(Empréstimos, Cartão de Crédito, Financiamentos)</p>
                             <!-- botão para inserção do valor numérico das dívidas ativas -->
                             <form name="dados" id="dados" method="post" action="salvar informações no BD">
-                                <input id="sessao2_input"  type="text" name="dados-usuario" required minlength="5" maxlength="10"
-                                    placeholder="Ex: 2.360,00">
+                                <input id="sessao2_input" type="text" name="dados-usuario" required minlength="5"
+                                    maxlength="10" placeholder="Ex: 2.360,00">
                                 <button type="submit" id="botao">Confirmar</button>
                             </form>
                         </div>
@@ -111,4 +112,5 @@
         </form>
     </main>
 </body>
+
 </html>

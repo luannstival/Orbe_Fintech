@@ -41,14 +41,12 @@ header {
     width: 18dvw;
     min-height: 100dvh;
     flex-shrink: 0;
-    /* impede que o header encolha */
 }
 
 main {
     background-color: #dfdfdfb2;
     padding: 0.5rem 3rem;
     border: 1px solid black;
-    /*main ocupa o espaco restante */
     flex: 1;
 }
 
@@ -90,99 +88,95 @@ input {
 }
 
 /* ------------------------------------------- */
-.header_pg1 {
-    h1 {
-        padding-bottom: 1rem;
-        font-size: var(--font-h1);
-        color: var(--color-title);
-    }
+/* CORREÇÃO AQUI: Desaninhado .header_pg1 */
+.header_pg1 h1 {
+    padding-bottom: 1rem;
+    font-size: var(--font-h1);
+    color: var(--color-title);
+}
 
-    ul {
-        list-style: none;
-        line-height: 3rem;
-        /* CORREÇÃO: linha fixa em vez de 100px */
-    }
+.header_pg1 ul {
+    list-style: none;
+    line-height: 3rem;
+}
 
-    li {
-        text-wrap: balance;
-        font-size: var(--font-h4);
-        font-weight: var(--weight-400);
-    }
+.header_pg1 li {
+    text-wrap: balance;
+    font-size: var(--font-h4);
+    font-weight: var(--weight-400);
+}
 
-    a {
-        text-decoration: none;
-        color: var(--color-body);
-    }
+.header_pg1 a {
+    text-decoration: none;
+    color: var(--color-body);
+}
 
-    a:hover {
-        color: var(--color-title);
-    }
+.header_pg1 a:hover {
+    color: var(--color-title);
 }
 
 /* ------------------------------------------- */
-.main_pg1 {
-    h2 {
-        padding-top: 1rem;
-        font-size: var(--font-h2);
-        color: var(--color-title);
-    }
+/* CORREÇÃO AQUI: Desaninhado .main_pg1 */
+.main_pg1 h2 {
+    padding-top: 1rem;
+    font-size: var(--font-h2);
+    color: var(--color-title);
+}
 
-    p {
-        font-size: var(--font-p);
-    }
+.main_pg1 p {
+    font-size: var(--font-p);
 }
 
 /* ------------------------------------------- */
-.article_sessao1 {
-    h3 {
-        font-size: var(--font-h3);
-        color: var(--color-title);
-    }
+/* CORREÇÃO AQUI: Desaninhado .article_sessao1 */
+.article_sessao1 h3 {
+    font-size: var(--font-h3);
+    color: var(--color-title);
+}
 
-    h4 {
-        font-size: var(--font-h4);
-        color: var(--color-subtitle);
-    }
+.article_sessao1 h4 {
+    font-size: var(--font-h4);
+    color: var(--color-subtitle);
+}
 
-    ul {
-        list-style-type: circle;
-    }
+.article_sessao1 ul {
+    list-style-type: circle;
+}
 
-    p {
-        font-size: var(--font-p);
-        font-weight: var(--weight-400);
-        color: var(--color-body);
-    }
+.article_sessao1 p {
+    font-size: var(--font-p);
+    font-weight: var(--weight-400);
+    color: var(--color-body);
 }
 
 /* ------------------------------------------- */
+/* CORREÇÃO AQUI: Desaninhado .article_sessao2 */
 .article_sessao2 {
     padding-top: 0.5rem;
+}
 
-    h3 {
-        font-size: var(--font-h3);
-        color: var(--color-title);
-    }
+.article_sessao2 h3 {
+    font-size: var(--font-h3);
+    color: var(--color-title);
+}
 
-    ul {
-        list-style-type: circle;
-    }
+.article_sessao2 ul {
+    list-style-type: circle;
+}
 
-    h4 {
-        font-size: var(--font-h4);
-        color: var(--color-subtitle);
-    }
+.article_sessao2 h4 {
+    font-size: var(--font-h4);
+    color: var(--color-subtitle);
+}
 
-    p {
-        font-size: var(--font-p);
-        font-weight: var(--weight-400);
-        color: var(--color-body);
-    }
+.article_sessao2 p {
+    font-size: var(--font-p);
+    font-weight: var(--weight-400);
+    color: var(--color-body);
 }
 
 /* ------------------------------------------- */
 /* BOTÕES E INPUTS */
-
 #botao {
     margin-left: 10px;
     font-family: "Garamond", serif;
@@ -208,7 +202,6 @@ input {
     background-color: #8b2e2eda;
 }
 
-
 .prosseguir {
     font-family: "Garamond", serif;
     font-size: var(--font-p);
@@ -218,14 +211,12 @@ input {
     transition: 0.5s;
     margin-top: 1rem;
     margin-left: auto;
-
 }
 
-.prosseguir {
-    a {
-        text-decoration: none;
-        color: black;
-    }
+/* CORREÇÃO AQUI: Desaninhado .prosseguir */
+.prosseguir a {
+    text-decoration: none;
+    color: black;
 }
 
 .prosseguir:hover {
@@ -239,7 +230,6 @@ input {
 /* RESPONSIVIDADE — TABLETS (max 768px)         */
 /* ============================================ */
 @media (max-width: 768px) {
-
     body {
         flex-direction: column;
     }
@@ -270,7 +260,6 @@ input {
 
     .prosseguir {
         margin: 1rem auto;
-        /* centraliza no mobile */
     }
 }
 
@@ -278,15 +267,6 @@ input {
 /* RESPONSIVIDADE — CELULAR (max 480px)         */
 /* ============================================ */
 @media (max-width: 480px) {
-
-    /* :root {
-        --font-h1: 2rem;
-        --font-h2: 1.5rem;
-        --font-h3: 1.2rem;
-        --font-h4: 1rem;
-        --font-p: 0.9rem;
-    } */
-
     main {
         padding: 0.5rem 1rem;
     }
