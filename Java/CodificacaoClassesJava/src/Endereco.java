@@ -1,10 +1,10 @@
 public class Endereco {
 
-    String logradouro;
-    int numero;
-    String cidade;
-    String estado;
-    String cep;
+    private String logradouro;
+    private int numero;
+    private String cidade;
+    private String estado;
+    private String cep;
 
     public Endereco() {
     }
