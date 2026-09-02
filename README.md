@@ -37,7 +37,9 @@ Ainda não foram implementados:
 
 ## Interface em HTML e CSS
 
-A primeira página representa o cadastro inicial da situação financeira do usuário.
+A primeira página representa o cadastro inicial da situação financeira do usuário. A imagem abaixo apresenta essa primeira versão, desenvolvida com HTML e CSS.
+
+![Tela de cadastro inicial da Orbe Fintech](Docs/Imagens/tela-cadastro-inicial.png)
 
 Ela contém campos para:
 
@@ -82,11 +84,13 @@ Conforme solicitado na atividade acadêmica, os métodos representam comportamen
 
 ## Estrutura atual
 
-```text
 Orbe_Fintech/
 ├── css_html/
 │   ├── pagina_1.html
 │   └── pagina_1.css
+├── Docs/
+│   └── Imagens/
+│       └── tela-cadastro-inicial.png
 ├── Java/
 │   └── CodificacaoClassesJava/
 │       └── src/
@@ -95,8 +99,8 @@ Orbe_Fintech/
 │           ├── SituacaoFinanceira.java
 │           ├── Transacao.java
 │           └── Usuario.java
+├── .gitignore
 └── README.md
-```
 
 ## Como visualizar a página
 
