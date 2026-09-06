@@ -1,13 +1,14 @@
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 public class Usuario {
     private Integer idUsuario;
     private String nome;
     private String cpf;
     private LocalDate dataNascimento;
-    private Endereco endereco;
     private LocalDateTime dataCadastro;
+    private Endereco endereco;
 
     public Usuario() {
     }
@@ -20,8 +21,13 @@ public class Usuario {
         this.endereco = endereco;
     }
 
-    public void exibirDadosUsuario() {
-        System.out.println("O método 'exibirDadosUsuario' foi executado com sucesso!");
+    public String formatarDadosUsuario(){
+        return "\n ID-"+idUsuario+
+                "\n Nome-"+nome+
+                "\n CPF-"+cpf+
+                "\n Data Nascimento-"+dataNascimento+
+                "\n Data Cadastro-"+ DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm").format(dataCadastro)+
+                "\n Endereço- "+endereco.formatarEndereco();
     }
 
     public LocalDateTime getDataCadastro() {return dataCadastro;}

@@ -8,7 +8,6 @@ public class Endereco {
 
     public Endereco() {
     }
-
     public Endereco(String logradouro, String numero, String cidade, String estado, String cep) {
         this.logradouro = logradouro;
         this.numero = numero;
@@ -16,9 +15,12 @@ public class Endereco {
         this.estado = estado;
         this.cep = cep;
     }
-
-    public void exibirEndereco(){
-        System.out.println("O método 'exibirEndereco' foi executado com sucesso!");
+    public String formatarEndereco(){
+        return logradouro+
+                "," +numero+
+                " - " +cidade+
+                "/"+estado+
+                " - CEP:"+cep;
     }
 
     public String getLogradouro() {
@@ -33,7 +35,9 @@ public class Endereco {
     public void setNumero(String numero) {
         this.numero = numero;
     }
-    public String getCidade() {return cidade;}
+    public String getCidade() {
+        return cidade;}
+    
     public void setCidade(String cidade) {
         this.cidade = cidade;
     }
