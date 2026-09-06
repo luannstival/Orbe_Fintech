@@ -15,7 +15,8 @@ O projeto ainda está em fase de aprendizado e não representa uma aplicação f
 Atualmente, o repositório possui:
 
 - uma página estática e responsiva de cadastro financeiro desenvolvida com HTML e CSS;
-- uma modelagem inicial do domínio da Fintech em Java;
+- classes em Java que possuem lógica de crédito, débito e cálculo de renda;
+- implementação de herança com uma superclasse abstrata e duas subclasses, polimorfismo e uma classe de execução `Main`;
 - classes que representam usuários, endereços, situações financeiras, contas bancárias e transações;
 - histórico de evolução mantido com Git e GitHub.
 
@@ -34,6 +35,7 @@ Ainda não foram implementados:
 |---|---|---|
 | Junho de 2026 | HTML5 e CSS3 | Criação da página de cadastro inicial, formulário de renda e compromissos financeiros, Flexbox e responsividade |
 | Agosto e setembro de 2026 | Orientação a objetos em Java | Criação das classes principais da Fintech, atributos privados, construtores, métodos, getters, setters e relacionamentos entre objetos |
+| Setembro de 2026 | Herança e polimorfismo em Java | Aplicação de superclasse abstrata, subclasses de entrada e saída, sobrescrita, regras de saldo e implementação da classe `Main` |
 
 ## Interface em HTML e CSS
 
@@ -71,7 +73,22 @@ Nesta etapa foram praticados:
 - relacionamentos entre objetos;
 - uso de `LocalDate` e `LocalDateTime`.
 
-Conforme solicitado na atividade acadêmica, os métodos representam comportamentos do sistema por meio de mensagens com `System.out.println`. As regras completas ainda não foram implementadas.
+Na atividade seguinte, o projeto foi ampliado com a criação das classes:
+
+- `TransacaoSaida`;
+- `TransacaoEntrada`;
+- `Main`.
+
+Como resultado da etapa atual:
+
+- `Transacao` tornou-se uma superclasse abstrata;
+- `ContaBancaria` faz a validação e alteração do saldo;
+- `TransacaoEntrada` e `TransacaoSaida` foram criadas como subclasses;
+- as duas subclasses sobrescrevem o método `processarTransacao()`, realizando entrada e saída de maneiras diferentes;
+- `SituacaoFinanceira` calcula a renda total;
+- `Endereco` e `Usuario` formatam e retornam seus dados;
+- `Main` demonstra as operações e o polimorfismo durante a execução.
+
 
 ## Tecnologias utilizadas
 
@@ -84,6 +101,7 @@ Conforme solicitado na atividade acadêmica, os métodos representam comportamen
 
 ## Estrutura atual
 
+```text
 Orbe_Fintech/
 ├── css_html/
 │   ├── pagina_1.html
@@ -96,11 +114,15 @@ Orbe_Fintech/
 │       └── src/
 │           ├── ContaBancaria.java
 │           ├── Endereco.java
+│           ├── Main.java
 │           ├── SituacaoFinanceira.java
 │           ├── Transacao.java
+│           ├── TransacaoEntrada.java
+│           ├── TransacaoSaida.java
 │           └── Usuario.java
 ├── .gitignore
 └── README.md
+```
 
 ## Como visualizar a página
 
@@ -126,13 +148,15 @@ Java/CodificacaoClassesJava
 
 No IntelliJ, utilize **Build → Build Project** para compilar as classes.
 
+O leitor deverá executar a classe `Main`.
+A execução da classe `Main` demonstra as operações de entrada e saída.
+
 ## Próximas etapas de aprendizagem
 
 As próximas melhorias serão realizadas de acordo com os conteúdos estudados durante o curso, como:
 
-- herança e polimorfismo;
 - coleções;
-- regras de negócio;
+- ampliação das regras de negócio;
 - persistência em banco de dados;
 - integração entre interface e back-end.
 
