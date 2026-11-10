@@ -1,0 +1,314 @@
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap"); /* TEMA ORBE (fonte) */
+
+:root {
+  --text: #6b6375;
+  --text-h: #08060d;
+  --bg: #fff;
+  --border: #e5e4e7;
+  --code-bg: #f4f3ec;
+  --accent: #aa3bff;
+  --accent-bg: rgba(170, 59, 255, 0.1);
+  --accent-border: rgba(170, 59, 255, 0.5);
+  --social-bg: rgba(244, 243, 236, 0.5);
+  --shadow:
+    rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
+
+  --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
+  --heading: system-ui, 'Segoe UI', Roboto, sans-serif;
+  --mono: ui-monospace, Consolas, monospace;
+
+  font: 18px/145% var(--sans);
+  letter-spacing: 0.18px;
+  color-scheme: light dark;
+  color: var(--text);
+  background: var(--bg);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  @media (max-width: 1024px) {
+    font-size: 16px;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text: #9ca3af;
+    --text-h: #f3f4f6;
+    --bg: #16171d;
+    --border: #2e303a;
+    --code-bg: #1f2028;
+    --accent: #c084fc;
+    --accent-bg: rgba(192, 132, 252, 0.15);
+    --accent-border: rgba(192, 132, 252, 0.5);
+    --social-bg: rgba(47, 48, 58, 0.5);
+    --shadow:
+      rgba(0, 0, 0, 0.4) 0 10px 15px -3px, rgba(0, 0, 0, 0.25) 0 4px 6px -2px;
+  }
+
+  #social .button-icon {
+    filter: invert(1) brightness(2);
+  }
+}
+
+#root {
+  width: 1126px;
+  max-width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  border-inline: 1px solid var(--border);
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+h1,
+h2 {
+  font-family: var(--heading);
+  font-weight: 500;
+  color: var(--text-h);
+}
+
+h1 {
+  font-size: 56px;
+  letter-spacing: -1.68px;
+  margin: 32px 0;
+  @media (max-width: 1024px) {
+    font-size: 36px;
+    margin: 20px 0;
+  }
+}
+h2 {
+  font-size: 24px;
+  line-height: 118%;
+  letter-spacing: -0.24px;
+  margin: 0 0 8px;
+  @media (max-width: 1024px) {
+    font-size: 20px;
+  }
+}
+p {
+  margin: 0;
+}
+
+code,
+.counter {
+  font-family: var(--mono);
+  display: inline-flex;
+  border-radius: 4px;
+  color: var(--text-h);
+}
+
+code {
+  font-size: 15px;
+  line-height: 135%;
+  padding: 4px 8px;
+  background: var(--code-bg);
+}
+
+/* ===== MENU LATERAL (remover este bloco inteiro para desfazer) ===== */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 100vh;
+  padding: 16px;
+  box-sizing: border-box;
+  border-right: 1px solid var(--border);
+  background: var(--bg);
+  text-align: left;
+}
+
+nav a {
+  display: block;
+  padding: 8px 0;
+}
+
+/* abre espaço para o conteúdo não ficar embaixo do menu */
+#root {
+  padding-left: 220px;
+}
+/* ===== FIM DO MENU LATERAL ===== */
+
+/* ===== TEMA ORBE (remover este bloco inteiro + a linha @import do topo para desfazer) ===== */
+:root {
+  --font-body: "Lora", serif;
+  --color-body: hsl(0, 0%, 33%);
+  --color-title: hsl(127, 100%, 10%);
+  --color-subtitle: hsl(0, 0%, 10%);
+  --color-light: hsla(0, 0%, 100%, 0.852);
+  --radius: 4px;
+
+  /* força o visual claro do Orbe (ignora o modo escuro do sistema) */
+  color-scheme: light;
+  --text: var(--color-body);
+  --text-h: var(--color-title);
+  --bg: #fff;
+  --border: #000;
+  --heading: var(--font-body);
+  --sans: var(--font-body);
+  font-family: var(--font-body);
+  text-wrap: balance;
+}
+
+/* layout: menu lateral verde + área principal cinza */
+#root {
+  width: 100%;
+  max-width: none;
+  border-inline: none;
+  padding-left: 200px;
+}
+
+#root > div {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+#root > div > :not(nav) {
+  flex: 1;
+  padding: 1rem 3rem;
+  background-color: #dfdfdfb2;
+  border: 1px solid #000;
+  border-left: none;
+  text-align: left;
+}
+
+/* menu lateral (header do Orbe) */
+nav {
+  background: #0b91147d;
+  border: 1px solid var(--color-subtitle);
+}
+
+nav a {
+  padding: 0;
+  line-height: 3rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-decoration: none;
+  color: var(--color-body);
+}
+
+nav a:hover {
+  color: var(--color-title);
+}
+
+/* títulos e textos */
+h1 {
+  font-size: 3rem;
+  letter-spacing: normal;
+  margin: 0 0 1rem;
+  color: var(--color-title);
+}
+
+h2 {
+  font-size: 2rem;
+  color: var(--color-title);
+}
+
+#root > div > :not(nav) a {
+  color: var(--color-title);
+}
+
+#root > div > :not(nav) a:hover {
+  color: var(--color-body);
+}
+
+/* formulário como "card" */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 420px;
+  padding: 1.5rem;
+  border: 1px solid var(--color-subtitle);
+  border-radius: 0.3rem;
+  background: var(--color-light);
+  font-family: "Garamond", serif;
+}
+
+form label {
+  display: block;
+  margin-bottom: 0.25rem;
+  font-weight: 700;
+  color: var(--color-subtitle);
+}
+
+input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0.4rem 0.6rem;
+  font-family: "Garamond", serif;
+  font-size: 1rem;
+  border-radius: var(--radius);
+}
+
+input:hover {
+  transition: 0.1s;
+  border: 2px solid #a4ffa4d3;
+  background-color: #47bb4f89;
+}
+
+button {
+  align-self: flex-start;
+  padding: 0.4rem 1.2rem;
+  font-family: "Garamond", serif;
+  font-size: 1rem;
+  letter-spacing: 1.2px;
+  border-radius: var(--radius);
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+button:hover {
+  transition: 0.1s;
+  border: 1px solid #000;
+  background-color: #a9a9a9;
+}
+
+/* botões do formulário no canto inferior direito */
+.form-acoes {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.75rem;
+}
+
+[role="alert"] {
+  color: #8b2e2e;
+  font-weight: 700;
+}
+
+/* responsivo (tablet/celular) */
+@media (max-width: 768px) {
+  #root {
+    padding-left: 0;
+  }
+
+  nav {
+    position: static;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  #root > div > :not(nav) {
+    padding: 0.5rem 1.5rem;
+    border-left: 1px solid #000;
+  }
+}
+
+@media (max-width: 480px) {
+  #root > div > :not(nav) {
+    padding: 0.5rem 1rem;
+  }
+}
+/* ===== FIM DO TEMA ORBE ===== */
