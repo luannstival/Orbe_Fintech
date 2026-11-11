@@ -1,7 +1,7 @@
 # Orbe Fintech — Fase 7 (Integration)
 
 Projeto acadêmico da Fase 7 do curso de Análise e Desenvolvimento de Sistemas (FIAP).
-Autora: Luann Stival Machado Rabelo.
+Autor: Luann Stival Machado Rabelo.
 
 O **Orbe Fintech** é um sistema de controle financeiro pessoal que cresce a cada fase. Nesta fase, o
 back-end (Java + Spring Boot + Oracle) foi integrado a um front-end em React, com três entidades
@@ -10,7 +10,7 @@ implementadas de ponta a ponta: **Usuário**, **Investimento** e **Instituição
 ## Estrutura da entrega
 
 ```
-Orbe-Fintech-Fase7/
+fase7/
 ├── backend/                       Projeto Spring Boot (Java 21, Maven)
 ├── frontend/                      Projeto React + Vite + TypeScript
 ├── script_fintech_corrigido.sql   Script de criação das tabelas no Oracle

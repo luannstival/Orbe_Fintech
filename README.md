@@ -18,16 +18,17 @@ Atualmente, o repositório possui:
 - classes em Java que possuem lógica de crédito, débito e cálculo de renda;
 - implementação de herança com uma superclasse abstrata e duas subclasses, polimorfismo e uma classe de execução `Main`;
 - classes que representam usuários, endereços, situações financeiras, contas bancárias e transações;
+- scripts SQL, modelo relacional e tabelas criadas no banco Oracle da FIAP;
+- uma atividade em Java que acessa o Oracle com o padrão DAO, para as entidades usuário, investimento e instituição bancária;
+- **Fase 7 (Integração):** um sistema com back-end em Spring Boot (JPA, camadas Repository, Service e Controller, API REST) conectado ao Oracle da FIAP e um front-end em React com TypeScript, que consome essa API, para as entidades usuário, investimento e instituição bancária;
 - histórico de evolução mantido com Git e GitHub.
 
 Ainda não foram implementados:
 
-- banco de dados conectado à aplicação;
-- autenticação de usuários;
+- autenticação segura de usuários (o login atual é simples, feito para fins de estudo);
 - integração com instituições bancárias;
-- persistência dos formulários;
 - regras financeiras completas;
-- aplicação back-end.
+- as demais entidades do modelo (contas bancárias, transações, rendas e gastos) na aplicação integrada.
 
 ## Evolução do projeto
 
@@ -36,6 +37,8 @@ Ainda não foram implementados:
 | Junho de 2026 | HTML5 e CSS3 | Criação da página de cadastro inicial, formulário de renda e compromissos financeiros, Flexbox e responsividade |
 | Agosto e setembro de 2026 | Orientação a objetos em Java | Criação das classes principais da Fintech, atributos privados, construtores, métodos, getters, setters e relacionamentos entre objetos |
 | Setembro de 2026 | Herança e polimorfismo em Java | Aplicação de superclasse abstrata, subclasses de entrada e saída, sobrescrita, regras de saldo e implementação da classe `Main` |
+| Outubro de 2026 | SQL, Oracle e acesso a banco com Java (DAO) | Modelo relacional, criação das tabelas, CRUD em SQL e atividade em Java que acessa o Oracle com o padrão DAO |
+| Outubro e novembro de 2026 | Spring Boot, JPA, API REST, React, TypeScript e Vite | Integração completa: back-end, banco Oracle e front-end consumindo a API, para três entidades |
 
 ## Interface em HTML e CSS
 
@@ -50,7 +53,7 @@ Ela contém campos para:
 - gastos fixos;
 - dívidas atuais.
 
-A página possui adaptação para computadores, tablets e celulares. Os formulários ainda não enviam ou armazenam informações.
+A página possui adaptação para computadores, tablets e celulares. Os formulários dessa primeira página ainda não enviam ou armazenam informações.
 
 ## Modelagem em Java
 
@@ -79,7 +82,7 @@ Na atividade seguinte, o projeto foi ampliado com a criação das classes:
 - `TransacaoEntrada`;
 - `Main`.
 
-Como resultado da etapa atual:
+Como resultado dessa etapa:
 
 - `Transacao` tornou-se uma superclasse abstrata;
 - `ContaBancaria` faz a validação e alteração do saldo;
@@ -89,12 +92,30 @@ Como resultado da etapa atual:
 - `Endereco` e `Usuario` formatam e retornam seus dados;
 - `Main` demonstra as operações e o polimorfismo durante a execução.
 
+## Banco de dados e DAO
+
+Na pasta `sql.fintech` estão os scripts SQL e a imagem do modelo relacional do banco de dados da Orbe, criado no Oracle.
+
+Na pasta `java.dao.sql` está uma atividade em Java que acessa o Oracle usando o padrão DAO, com as entidades usuário, investimento e instituição bancária.
+
+## Fase 7 — Integração
+
+A pasta `fase7` reúne a atividade final da fase, em que as tecnologias estudadas foram conectadas em um único sistema:
+
+- **Back-end** (`fase7/backend`): Java, Spring Boot, JPA, camadas Model, Repository, Service e Controller, e endpoints REST (GET, POST, PUT e DELETE) com os códigos de status HTTP adequados;
+- **Banco de dados:** Oracle da FIAP, com o script de criação das tabelas em `fase7/script_fintech_corrigido.sql`;
+- **Front-end** (`fase7/frontend`): React, TypeScript, Vite e React Router, com componentes, props, estado, rotas, login, página inicial, página de erro e telas de consulta, cadastro, edição e exclusão para as três entidades.
+
+As instruções para rodar o back-end e o front-end, o usuário de teste e as limitações conhecidas estão em [`fase7/README.md`](fase7/README.md).
 
 ## Tecnologias utilizadas
 
 - HTML5;
 - CSS3;
 - Java;
+- SQL e Oracle;
+- Spring Boot, JPA/Hibernate e Maven;
+- React, TypeScript e Vite;
 - Git;
 - GitHub;
 - IntelliJ IDEA.
@@ -120,11 +141,18 @@ Orbe_Fintech/
 │           ├── TransacaoEntrada.java
 │           ├── TransacaoSaida.java
 │           └── Usuario.java
+├── java.dao.sql/            Atividade Java + Oracle com DAO
+├── sql.fintech/             Scripts SQL e modelo relacional
+├── fase7/
+│   ├── backend/             Spring Boot + JPA + API REST
+│   ├── frontend/            React + TypeScript + Vite
+│   ├── script_fintech_corrigido.sql
+│   └── README.md
 ├── .gitignore
 └── README.md
 ```
 
-## Como visualizar a página
+## Como visualizar a página em HTML
 
 Clone o repositório:
 
@@ -151,14 +179,18 @@ No IntelliJ, utilize **Build → Build Project** para compilar as classes.
 O leitor deverá executar a classe `Main`.
 A execução da classe `Main` demonstra as operações de entrada e saída.
 
+## Como rodar a Fase 7
+
+Siga o passo a passo do arquivo [`fase7/README.md`](fase7/README.md). Para rodar, é preciso ter acesso a uma conta do Oracle da FIAP; usuário e senha são informados por variáveis de ambiente e não ficam no código.
+
 ## Próximas etapas de aprendizagem
 
 As próximas melhorias serão realizadas de acordo com os conteúdos estudados durante o curso, como:
 
-- coleções;
-- ampliação das regras de negócio;
-- persistência em banco de dados;
-- integração entre interface e back-end.
+- autenticação mais segura e proteção das rotas do front-end;
+- mensagens de erro nas telas quando a API recusar um dado;
+- novas entidades na aplicação integrada (contas bancárias, transações, rendas e gastos);
+- ampliação das regras de negócio.
 
 Esses itens representam estudos futuros e ainda não estão implementados.
 
@@ -176,4 +208,4 @@ O objetivo deste repositório é registrar de forma transparente minha evoluçã
 
 ---
 
-Última atualização: setembro de 2026.
+Última atualização: novembro de 2026.
