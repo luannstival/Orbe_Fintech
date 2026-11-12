@@ -7,15 +7,17 @@ public class Main {
 
         Endereco endereco = new Endereco("Rua João Maria", "80", "Monte Mor","SP","11122233");
 
-        Usuario usuario = new Usuario(1, "Luan", "11122233344", LocalDate.of(1995,5,24), LocalDateTime.now(), endereco);
+        Usuario usuario = new Usuario(1, "Luann", "11122233344", LocalDate.of(1995,5,24), LocalDateTime.now(), endereco);
         System.out.println("Os dados completos do usuário são: " + usuario.formatarDadosUsuario());
 
         ContaBancaria minhaConta = new ContaBancaria(364512, usuario, 1000.0, "Banco Orbe");
 
-        Transacao entrada = new TransacaoEntrada(2405, minhaConta, 200.0, LocalDateTime.now());
+        TransacaoEntrada entrada = new TransacaoEntrada(2405, minhaConta, 200.0, LocalDateTime.now(), "Freelancer");
         boolean resultadoEntrada = entrada.processarTransacao();
         if (resultadoEntrada){
             System.out.println(" Crédito realizado! Saldo após entrada: R$" +minhaConta.getSaldoAtual());
+            System.out.println(" Categoria da entrada: " + entrada.getCategoriaEntrada());
+
         }else{
             System.out.println(" Operação não realizada!");
         }
